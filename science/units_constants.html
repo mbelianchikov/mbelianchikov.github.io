@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>M.A. Belyanchikov: Units and Constants</title>
+  </head>
+  <body>
+    <h2>Energy Units Conversion</h2>
+    <p> For quick conversions, enter a value into any of the boxes below, and
+      the remaining units will be calculated automatically and rounded to the
+      fifth decimal place. </p>
+    <table style="border-width:1px">
+      <form name="conversion"></form>
+      <tbody>
+        <tr>
+          <td style="width: 200px;"><span style="font-size:10pt"><input id="eV"
+
+                onkeyup="eVconvert()" size="15" value="1"> eV </span></td>
+          <td style="width: 200px;"><span style="font-size:10pt"><input id="nm"
+
+                onkeyup="nmconvert()" size="15" value="1240"> nm </span></td>
+          <td style="width: 200px;"><span style="font-size:10pt"><input id="wavnum"
+
+                onkeyup="wavnumconvert()" size="15" value="8065.6"> cm<sup>-1</sup></span></td>
+          <td style="width: 200px;"><span style="font-size:10pt"><input id="fs"
+
+                onkeyup="fsconvert()" size="15" value="4.136"> fs</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:10pt"><input id="meV" onkeyup="meVconvert()"
+
+                size="15" value="1000"> meV</span></td>
+          <td><span style="font-size:10pt"><input id="micron" onkeyup="micronconvert()"
+
+                size="15" value="1.24"> µm</span></td>
+          <td><span style="font-size:10pt"><input id="THz" onkeyup="THzconvert()"
+
+                size="15" value="241.8"> THz</span></td>
+          <td><span style="font-size:10pt"><input id="ps" onkeyup="psconvert()"
+
+                size="15" value="0.004"> ps</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr style="width: 900px; color: white; height: 0px; margin-left: 0px;">
+
+
+
+    <h2>dB Calculator</h2>
+    <h3>linear -&gt; dB</h3>
+    <form name="formLin2dB" id="formLin2dB" method="post" action="">
+      <p ><strong>Input</strong></p>
+      <table width="52%" border="1">
+        <tr>
+          <td width="30%">Linear</td>
+          <td width="20%"><em>x</em></td>
+          <td width="50%"><input name="textfield_x" type="text" id="textfield_x" value="10" />
+          </td>
+        </tr>
+      </table>
+      <p align="center">
+        <input name="Calculate" type="button" id="Calculate" value="Calculate" onClick="TransLin2dB()"/>
+      </p>
+      <p><strong>Output</strong></p>
+      <table width="52%" border="1">
+        <tr>
+          <td width="30%">Strength (E, H, V, I and so on)</td>
+          <td width="20%"><em>y</em>=20 log<sub>10</sub> <em>x</em></td>
+          <td width="50%"><input name="textfield_20log10" type="text" id="textfield_20log10" />
+            dB</td>
+        </tr>
+        <tr>
+          <td>Energy, Power (P, W)</td>
+          <td><em>y</em>=10 log<sub>10</sub> <em>x</em></td>
+          <td><input name="textfield_10log10" type="text" id="textfield_10log10" />
+            dB</td>
+        </tr>
+      </table>
+      </form>
+    <h3>Calculator (dB -&gt; Linear)</h3>
+    <form name="formdB2Lin" id="formdB2Lin" method="post" action="">
+      <p><strong>Input</strong></p>
+      <table width="52%" border="1">
+        <tr>
+          <td width="30%">dB</td>
+          <td width="20%"><em>y</em></td>
+          <td width="50%"><input name="textfield_y" type="text" id="textfield_y" value="10" />
+            dB </td>
+        </tr>
+      </table>
+      <p align="center">
+        <input name="Calculate2" type="button" id="Calculate2" value="Calculate" onclick="TransdB2Lin()"/>
+      </p>
+      <p><strong>Output</strong></p>
+      <table width="52%" border="1">
+        <tr>
+          <td width="30%">Strength (E, H, V, I and so on)</td>
+          <td width="20%">10<sup><em>y</em>/20</sup></td>
+          <td width="50%"><input name="textfield_lin_field" type="text" id="textfield_lin_field" />
+          </td>
+        </tr>
+        <tr>
+          <td>Energy, Power (P, W)</td>
+          <td>10<sup><em>y</em>/10</sup></td>
+          <td><input name="textfield_lin_pow" type="text" id="textfield_lin_pow" />
+          </td>
+        </tr>
+      </table>
+    <hr style="width: 900px; color: white; height: 0px; margin-left: 0px;">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Constants</h2>
+    <p>Speed of light in vacuum \(c = 299 792 458\) \(m\;s^{-1}\) exact</p>
+    <p>Planck constant \(h = 6.626 070 15×10^{−34}\) \(J\;s\) exact</p>
+    <p>Planck constant, reduced \(\hbar \equiv h/2\pi = 1.054 571 817...
+      ×10^{−34}\) \(Js\) exact</p>
+    <p>Electron charge \(e = 1.602 176 634×10^{−19}\) \(C\) exact</p>
+    <p>Useful constant \(\hbar c = 197.326 980 4...\) \(MeV fm\)</p>
+    <hr style="width: 500px; color: white; height: 0px; margin-left: 0px;">
+    <p>electron mass \(m_e = 0.510 998 950 00(15) \) \(MeV = 9.109 383
+      7015(28)×10^{−31} \: kg\)</p>
+    <p>proton mass \(m_p = 938.272 088 16(29) \) \(MeV = 1.672 621 923
+      69(51)×10^{−27} \: kg\)</p>
+    <p>neutron mass \(m_n = 939.565 420 52(54) \) \(MeV = 1.674 927 498
+      04×10^{−27} \: kg\)</p>
+    <p>atomic mass unit \(u =(mass\:\ce{^{12}_{6}C}\:atom)/12 = 931.494 102
+      42(28) \) \(MeV = 1.660 539 066 60(50) ×10^{−27}\) \(kg\)</p>
+    <hr style="width: 500px; color: white; height: 0px; margin-left: 0px;">
+    <p>fine-structure constant \(\alpha = e^2/4\pi\epsilon_0\hbar c = 7.297 352
+      5693(11)×10^3 = 1/137.035 999 084(21)\)</p>
+    <p>classical electron radius \(r_e = e^2/4\pi\epsilon_0 m_e c^2 = 2.817 940
+      3262(13)×10^{-15} \: m\)</p>
+    <p>Bohr radius \(a_\infty = 4\pi\epsilon_0\hbar^2/m_e e^2 =r_e \alpha^{-2} =
+      0.529 177 210 903(80)×10^{-10} \: m\)</p>
+    <p>Wavelength of \(1\;eV/c\) particle \(= hc/(1 \: eV) = 1.239 841
+      984...×10^{-6} \: m\)</p>
+    <p>Rydberg energy \(hcR_\infty = m_e e^4/2(4\pi\epsilon_0)^2\hbar^2 = 13.605
+      693 122 994(26) \: eV\)</p>
+    <hr style="width: 500px; color: white; height: 0px; margin-left: 0px;">
+    <p>Bohr magneton \(\mu_B = e \hbar/2 m_e = 5.788 381 8060(17)×10^{-11} \:
+      MeV\:T^{-1}\)</p>
+    <p>Nuclear magneton \(\mu_N = e \hbar/2 m_p = 3.152 451 258 44(96)×10^{-14}
+      \: MeV\:T^{-1}\)</p>
+    <p>Electron cyclotron freq./field \(\omega^{e}_{cycle}/B = e/m_e = 1.758 820
+      010 76(53)×10^{11} \: rad\:s^{-1}\:T^{-1}\)</p>
+    <p>Proton cyclotron freq./field \(\omega^{p}_{cycle}/B = e/m_p = 9.578 833
+      1560(29)×10^{7} \: rad\:s^{-1}\:T^{-1}\)</p>
+    <hr style="width: 900px; color: white; height: 0px; margin-left: 0px;">
+    <h2>Periodic Table</h2>
+    <a href="./periodic_table.png"><img src="periodic_table.png" style="width: 915px; height: 426px;"></a>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript">
+
+c=299792458;
+h=4.135667516e-15;
+
+function roundfive(num){
+round = (Math.round(num*100000))/100000;
+return (round.toFixed(5))
+}
+
+function eVconvert(){
+meV.value=roundfive(eV.value*(1e3));
+nm.value=roundfive(h*c/eV.value*(1e9));
+micron.value=roundfive(h*c/eV.value*(1e6));
+wavnum.value=roundfive(eV.value/(h*c*100));
+THz.value=roundfive(eV.value/h*(1e-12));
+fs.value=roundfive(h/eV.value*(1e15));
+ps.value=roundfive(h/eV.value*(1e12));
+}
+
+function meVconvert(){
+with (document.conversion){
+eV.value=roundfive(meV.value*(1e-3));
+nm.value=roundfive(h*c/meV.value*(1e9)*(1e3));
+micron.value=roundfive(h*c/meV.value*(1e6)*(1e3));
+wavnum.value=roundfive(meV.value/(h*c*100)*(1e-3));
+THz.value=roundfive(meV.value/h*(1e-12)*(1e-3));
+fs.value=roundfive(h/meV.value*(1e15)*(1e3));
+ps.value=roundfive(h/meV.value*(1e12)*(1e3));
+}}
+
+function nmconvert(){
+with (document.conversion){
+eV.value=roundfive(h*c/nm.value*(1e9));
+meV.value=roundfive(h*c/nm.value*(1e9)*(1e3));
+micron.value=roundfive(nm.value*(1e-3));
+wavnum.value=roundfive(1/(nm.value*100)*(1e9));
+THz.value=roundfive(c/nm.value*(1e9)*(1e-12));
+fs.value=roundfive(nm.value/c*(1e-9)*(1e15));
+ps.value=roundfive(nm.value/c*(1e-9)*(1e12));
+}}
+
+function micronconvert(){
+with (document.conversion){
+eV.value=roundfive(h*c/micron.value*(1e6));
+meV.value=roundfive(h*c/micron.value*(1e6)*(1e3));
+nm.value=roundfive(micron.value*(1e3));
+wavnum.value=roundfive(1/(micron.value*100)*(1e6));
+THz.value=roundfive(c/micron.value*(1e6)*(1e-12));
+fs.value=roundfive(micron.value/c*(1e-6)*(1e15));
+ps.value=roundfive(micron.value/c*(1e-6)*(1e12));
+}}
+
+function wavnumconvert(){
+with (document.conversion){
+eV.value=roundfive(wavnum.value*h*c*100);
+meV.value=roundfive(wavnum.value*h*c*100*(1e3));
+nm.value=roundfive((1/(wavnum.value*100))*(1e9));
+micron.value=roundfive((1/(wavnum.value*100))*(1e6));
+THz.value=roundfive(wavnum.value*c*100*(1e-12));
+fs.value=roundfive(1/(wavnum.value*c*100)*(1e15));
+ps.value=roundfive(1/(wavnum.value*c*100)*(1e12));
+}}
+
+function THzconvert(){
+with (document.conversion){
+eV.value=roundfive(h*THz.value*(1e12));
+meV.value=roundfive(h*THz.value*(1e12)*(1e3));
+nm.value=roundfive(c/THz.value*(1e-12)*(1e9));
+micron.value=roundfive(c/THz.value*(1e-12)*(1e6));
+wavnum.value=roundfive(h*THz.value*(1e12)/(h*c*100));
+fs.value=roundfive(1/THz.value*(1e-12)*(1e15));
+ps.value=roundfive(1/THz.value*(1e-12)*(1e12));
+}}
+
+function fsconvert(){
+with (document.conversion){
+eV.value=roundfive(h/fs.value*(1e15));
+meV.value=roundfive(h/fs.value*(1e15)*(1e3));
+nm.value=roundfive(c*fs.value*(1e-15)*(1e9));
+micron.value=roundfive(c*fs.value*(1e-15)*(1e6));
+wavnum.value=roundfive(1/(fs.value*c*100)*(1e15));
+THz.value=roundfive(1/fs.value*(1e15)*(1e-12));
+ps.value=roundfive(fs.value*(1e-3));
+}}
+
+function psconvert(){
+with (document.conversion){
+eV.value=roundfive(h/ps.value*(1e12));
+meV.value=roundfive(h/ps.value*(1e12)*(1e3));
+nm.value=roundfive(c*ps.value*(1e-12)*(1e9));
+micron.value=roundfive(c*ps.value*(1e-12)*(1e6));
+wavnum.value=roundfive(1/(ps.value*c*100)*(1e12));
+THz.value=roundfive(1/ps.value*(1e12)*(1e-12));
+fs.value=roundfive(ps.value*(1e3));
+}}
+
+function log10(x) {
+    // log_{a) b = log_{c} b / log_{c} a
+    return(Math.log(x)/Math.LN10);
+}
+function TransLin2dB() {
+    var x = Number(document.formLin2dB.textfield_x.value);
+    document.formLin2dB.textfield_20log10.value = (20*log10(x));
+    document.formLin2dB.textfield_10log10.value = (10*log10(x));
+    return(0);
+}
+function TransdB2Lin() {
+    var y = Number(document.formdB2Lin.textfield_y.value);
+    document.formdB2Lin.textfield_lin_field.value = (Math.pow(10,y/20));
+    document.formdB2Lin.textfield_lin_pow.value = (Math.pow(10,y/10));
+    return(0);
+}
+
+</script>
+  </body>
+</html>
