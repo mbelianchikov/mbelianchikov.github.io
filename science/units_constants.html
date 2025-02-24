@@ -27,7 +27,7 @@
                 onkeyup="fsconvert()" size="15" value="4.136"> fs</span></td>
           <td style="width: 200px;"><span style="font-size:10pt"><input id="K"
 
-                onkeyup="Kconvert()" size="15" value="4.136"> K</span></td>
+                onkeyup="Kconvert()" size="15" value="11600"> K</span></td>
         </tr>
         <tr>
           <td><span style="font-size:10pt"><input id="meV" onkeyup="meVconvert()"
@@ -181,6 +181,7 @@ wavnum.value=roundfive(eV.value/(h*c*100));
 THz.value=roundfive(eV.value/h*(1e-12));
 fs.value=roundfive(h/eV.value*(1e15));
 ps.value=roundfive(h/eV.value*(1e12));
+K.value=roundfive(eV.value*(11600));
 }
 
 function meVconvert(){
@@ -192,6 +193,7 @@ wavnum.value=roundfive(meV.value/(h*c*100)*(1e-3));
 THz.value=roundfive(meV.value/h*(1e-12)*(1e-3));
 fs.value=roundfive(h/meV.value*(1e15)*(1e3));
 ps.value=roundfive(h/meV.value*(1e12)*(1e3));
+K.value=roundfive(meV.value*(11.6));
 }}
 
 function nmconvert(){
@@ -203,6 +205,7 @@ wavnum.value=roundfive(1/(nm.value*100)*(1e9));
 THz.value=roundfive(c/nm.value*(1e9)*(1e-12));
 fs.value=roundfive(nm.value/c*(1e-9)*(1e15));
 ps.value=roundfive(nm.value/c*(1e-9)*(1e12));
+K.value=roundfive(11.6*h*c/nm.value*(1e9)*(1e3));
 }}
 
 function micronconvert(){
@@ -214,6 +217,7 @@ wavnum.value=roundfive(1/(micron.value*100)*(1e6));
 THz.value=roundfive(c/micron.value*(1e6)*(1e-12));
 fs.value=roundfive(micron.value/c*(1e-6)*(1e15));
 ps.value=roundfive(micron.value/c*(1e-6)*(1e12));
+K.value=roundfive(11.6*h*c/micron.value*(1e6)*(1e3));
 }}
 
 function wavnumconvert(){
@@ -225,6 +229,7 @@ micron.value=roundfive((1/(wavnum.value*100))*(1e6));
 THz.value=roundfive(wavnum.value*c*100*(1e-12));
 fs.value=roundfive(1/(wavnum.value*c*100)*(1e15));
 ps.value=roundfive(1/(wavnum.value*c*100)*(1e12));
+K.value=roundfive(11.6*wavnum.value*h*c*100*(1e3));
 }}
 
 function THzconvert(){
@@ -236,6 +241,7 @@ micron.value=roundfive(c/THz.value*(1e-12)*(1e6));
 wavnum.value=roundfive(h*THz.value*(1e12)/(h*c*100));
 fs.value=roundfive(1/THz.value*(1e-12)*(1e15));
 ps.value=roundfive(1/THz.value*(1e-12)*(1e12));
+K.value=roundfive(11.6*h*THz.value*(1e12)*(1e3));
 }}
 
 function fsconvert(){
@@ -247,6 +253,7 @@ micron.value=roundfive(c*fs.value*(1e-15)*(1e6));
 wavnum.value=roundfive(1/(fs.value*c*100)*(1e15));
 THz.value=roundfive(1/fs.value*(1e15)*(1e-12));
 ps.value=roundfive(fs.value*(1e-3));
+K.value=roundfive(11.6*h/fs.value*(1e15)*(1e3));
 }}
 
 function psconvert(){
@@ -258,14 +265,15 @@ micron.value=roundfive(c*ps.value*(1e-12)*(1e6));
 wavnum.value=roundfive(1/(ps.value*c*100)*(1e12));
 THz.value=roundfive(1/ps.value*(1e12)*(1e-12));
 fs.value=roundfive(ps.value*(1e3));
+K.value=roundfive(11.6*h/ps.value*(1e12)*(1e3));
 }}
 
 function Kconvert(){
 with (document.conversion){
 eV.value=roundfive(86.2*K.value*(1e-6));
 meV.value=roundfive(86.2*K.value*(1e-3));
-nm.value=roundfive(86.2*h*c/K.value*(1e3));
-micron.value=roundfive(86.2*h*c/K.value);
+nm.value=roundfive(h*c/(86.2*K.value*(1e-3))*(1e9)*(1e3));
+micron.value=roundfive(h*c/(86.2*K.value*(1e-3))*(1e6)*(1e3));
 wavnum.value=roundfive(86.2*K.value*(1e-6)/(h*c*100));
 THz.value=roundfive(86.2*K.value*(1e-6)/h*(1e-12));
 fs.value=roundfive(h/(86.2*K.value*(1e-6))*(1e15));
